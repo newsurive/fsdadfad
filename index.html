@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('45c461194f4a7d9b602d8f3dd37c70bb');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '눈희 컴퍼니【𝐏𝐒】',
+        description: '#눈희 #pop? #멜리',
+        imageUrl:
+          'https://cdn.discordapp.com/attachments/861163186799771659/1246421678339395605/KakaoTalk_20240601_201410026.jpg?ex=665c5425&is=665b02a5&hm=5ff3cbcf900fe21a21f7b0877d5ba05d2ee90d3c4099b1d1edff7ad5c00787b9&',
+        link: {
+          mobileWebUrl: 'https://goodkid123.neocities.org',
+          webUrl: 'https://goodkid123.neocities.org',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '입장하기 | 자세히 보기',
+          link: {
+            mobileWebUrl: 'https://goodkid123.neocities.org',
+            webUrl: 'https://goodkid123.neocities.org',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
